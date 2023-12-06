@@ -34,3 +34,9 @@ export default {
 React-aria examples for best practices: [https://react-spectrum.adobe.com/react-aria/index.html](https://react-spectrum.adobe.com/react-aria/index.html)
 
 WCAG reference: [https://www.w3.org/WAI/standards-guidelines/wcag/](https://www.w3.org/WAI/standards-guidelines/wcag/)
+
+# TODO
+- Add common components
+- Install the emotion styling packages (`@emotion/styled`, `@emotion/react`)
+- Add the theme provider
+
