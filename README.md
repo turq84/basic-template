@@ -32,3 +32,5 @@ export default {
 # React-aria
 
 React-aria examples for best practices: [https://react-spectrum.adobe.com/react-aria/index.html](https://react-spectrum.adobe.com/react-aria/index.html)
+
+WCAG reference: [https://www.w3.org/WAI/standards-guidelines/wcag/](https://www.w3.org/WAI/standards-guidelines/wcag/)
