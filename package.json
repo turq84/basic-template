@@ -1,0 +1,84 @@
+{
+  "name": "vite-data-visualization",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "cypress:open": "cypress open",
+    "husky:commit-msg": "commitlint --edit",
+    "husky:pre-commit": "lint-staged",
+    "husky:pre-push": "echo 'TODO: Add a pre-push hook'",
+    "lint": "eslint './src/**/*.{ts,tsx}' --ignore-path .eslintignore --quiet --fix",
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "test": "if [ -z ${test_name} ]; then cypress run; else cypress run -s test/integration/**/${test_name}.spec.ts; fi"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "wip",
+          "feat",
+          "fix",
+          "docs",
+          "style",
+          "refactor",
+          "perf",
+          "test",
+          "revert",
+          "build",
+          "ci",
+          "chore"
+        ]
+      ]
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "prettier --write --ignore-unknown",
+      "npm run lint"
+    ]
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-aria": "^3.30.0",
+    "react-dom": "18.2.0",
+    "victory": "36.7.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@types/lodash": "4.14.202",
+    "@types/react": "18.2.37",
+    "@types/react-dom": "18.2.15",
+    "@typescript-eslint/eslint-plugin": "6.13.2",
+    "@typescript-eslint/parser": "6.13.2",
+    "@vitejs/plugin-react": "4.2.0",
+    "cypress": "13.6.0",
+    "eslint": "8.39.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-lodash": "7.4.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "8.0.3",
+    "lint-staged": "15.2.0",
+    "prettier": "2.8.8",
+    "typescript": "5.2.2",
+    "vite": "^5.0.6"
+  },
+  "eslintConfig": {
+    "configFile": ".eslintrc.cjs"
+  }
+}
