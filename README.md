@@ -39,4 +39,27 @@ WCAG reference: [https://www.w3.org/WAI/standards-guidelines/wcag/](https://www.
 - Add common components
 - Install the emotion styling packages (`@emotion/styled`, `@emotion/react`)
 - Add the theme provider
+- Set up `react-router-dom` in the `App.tsx` file.
+-  -Create a folder in the `src` folder called `pages`.
+
+  ```
+// App.tsx
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './pages/home';
+
+// list all links and their pages
+const router = createBrowserRouter([{ path: '/', element: <Home /> }]);
+
+export default function App() {
+  return (
+    <Document>
+      <ThemeProvider theme={theme}>
+        <AriaLiveContextProvider>
+          <RouterProvider router={router} /> // Added this line
+        </AriaLiveContextProvider>
+      </ThemeProvider>
+    </Document>
+  );
+```
+}
 
