@@ -81,8 +81,5 @@
     "prettier": "2.8.8",
     "typescript": "5.2.2",
     "vite": "^5.0.6"
-  },
-  "eslintConfig": {
-    "configFile": ".eslintrc.cjs"
   }
 }

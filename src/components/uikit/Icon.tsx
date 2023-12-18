@@ -4,7 +4,7 @@ import type { IconType } from 'react-icons';
 
 import type { Color } from '../../constants/theme';
 
-type Props = SVGAttributes<any> & {
+type Props = SVGAttributes<SVGSVGElement> & {
   icon: IconType;
   color: Color | 'currentColor';
   size: 'small' | 'normal' | 'large' | number;

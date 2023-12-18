@@ -1,5 +1,3 @@
-export { default as AriaHidden } from './AriaHidden';
-export { AriaLiveContextProvider, useAriaLive } from './AriaLive';
 export { default as Content } from './Content';
 export { default as Icon } from './Icon';
 export { default as Spacing } from './Spacing';

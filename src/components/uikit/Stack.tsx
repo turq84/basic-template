@@ -58,8 +58,9 @@ const getCSS = (p: ThemedProps) => [
 const getResponsiveCSS = (p: Props) => {
   const [baseProps, mediaProps] = parseResponsiveProps(p, layoutProps);
   const responsiveProps = Object.entries(mediaProps).map(
-    ([breakpointKey, breakpointProps]: any) => {
-      const breakpointCSS = getCSS({ ...p, ...breakpointProps });
+    ([breakpointKey, breakpointProps]) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const breakpointCSS = getCSS({ ...p, ...(breakpointProps as any) });
       return media[breakpointKey as BreakpointKey]`${breakpointCSS}`;
     }
   );

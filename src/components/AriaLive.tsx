@@ -21,7 +21,11 @@ const liveContext =
 const ContextProvider = liveContext.Provider;
 
 // Inspired by https://almerosteyn.com/2017/09/aria-live-regions-in-react
-export const AriaLiveContextProvider = ({ children }: any) => {
+export const AriaLiveContextProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   const [politeMessages, setPoliteMessages] = React.useState<string[]>([]);
   const [assertiveMessages, setAssertiveMessages] = React.useState<string[]>(
     []

@@ -14,19 +14,20 @@ interface Props extends React.ComponentProps<'span'> {
 
 type Tags = keyof JSX.IntrinsicElements;
 
-// eslint-disable-next-line react/display-name
-const Text = React.forwardRef<any, Props>(
+const Text = React.forwardRef<HTMLSpanElement, Props>(
   ({ variant, as: asTag, children, ...rest }, ref) => {
     const tag = asTag || variantToTag[variant];
     const Comp = TextBase.withComponent(tag);
 
     return (
-      <Comp {...rest} variant={variant} ref={ref as any}>
+      <Comp {...rest} variant={variant} ref={ref}>
         {children}
       </Comp>
     );
   }
 );
+
+Text.displayName = 'Text';
 
 const TextBase = styled.span<Props>`
   margin: 0;

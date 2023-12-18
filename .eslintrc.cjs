@@ -24,14 +24,11 @@ module.exports = {
   },
   rules: {
     // You must disable the base rule as it can report incorrect errors
-    'no-use-before-define': 'off',
     'no-var': 'error',
     'eslint-comments/no-unlimited-disable': 'off',
-    // Turn of unuseful TS specific rules
+    // Turn off unuseful TS specific rules
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
-    '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
