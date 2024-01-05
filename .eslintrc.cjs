@@ -58,15 +58,6 @@ module.exports = {
         ],
       },
     ],
-    // We should use the custom link component in order to benefit from automatic preloading
-    'no-restricted-imports': [
-      'error',
-      {
-        name: 'react-router-dom',
-        importNames: ['Link', 'NavLink'],
-        message: 'Please use custom Link, UnstyledLink, or NavLink instead.',
-      },
-    ],
   },
   settings: {
     react: {
